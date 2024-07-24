@@ -310,6 +310,7 @@ section.contato {
   font-weight: 800;
   line-height: 2rem;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 /* Estilo do Footer */
