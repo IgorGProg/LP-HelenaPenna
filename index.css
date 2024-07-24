@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #feefe8;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Estilo do Header */
+
+header {
+  width: 100%;
+  padding: 2rem 0;
+  position: fixed;
+  background-color: #feefe8;
+}
+header .interface {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo span {
+  color: #918270;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+header .menu-desktop nav ul {
+  list-style-type: none;
+}
+header .menu-desktop nav ul li {
+  display: inline-block;
+  margin: 0 2rem;
+}
+header .menu-desktop nav ul li a {
+  text-decoration: none;
+  color: #785c5b;
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.menu-desktop nav a:hover {
+  transform: scale(1.1);
+}
+header .btn-contato a {
+  display: inline-block;
+  text-decoration: none;
+  color: #918270;
+  font-size: 1.2rem;
+  transition: 0.6s;
+}
+header .btn-contato a:hover {
+  transform: scale(1.1);
+}
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu i {
+  color: #ab735b;
+  font-size: 40px;
+  display: none;
+}
+.menu-mobile .btn-fechar {
+  padding: 20px 8%;
+}
+.menu-mobile .btn-fechar i {
+  color: black;
+  font-size: 30px;
+}
+.menu-mobile {
+  background-color: rgba(254, 239, 232, 0.85);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu {
+  display: block;
+}
+.menu-mobile nav ul {
+  list-style-type: none;
+  text-align: right;
+}
+.menu-mobile nav ul li {
+  margin: 0 1rem;
+}
+.menu-mobile nav ul li a {
+  display: inline-block;
+  padding: 20px 5%;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #785c5b;
+  transition: 0.6s;
+}
+.menu-mobile nav a:hover {
+  transform: scale(1.1);
+}
+.overlay-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: -1;
+}
+
+/* Estilo do Hero */
+section.hero-site {
+  height: 90vh;
+  background-image: url(image/hero-banner-5.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  color: #ab735b;
+}
+.hero-site .interface {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.hero-site .hero-img-mobile {
+  display: none;
+}
+.hero-site .txt-hero h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 200;
+}
+.hero-site .txt-hero h1 span {
+  display: block;
+  font-weight: 600;
+}
+.hero-site .txt-hero p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  text-align: justify;
+  letter-spacing: 0.1rem;
+}
+.hero-site .txt-hero p span {
+  display: block;
+}
+
+/* Estilo do menu Sobre */
+section.sobre {
+  padding: 6rem 0;
+  color: #ab735b;
+}
+.sobre .itens-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+  margin-bottom: 4rem;
+}
+.sobre .itens-container .img-itens img {
+  max-width: 480px;
+  border-radius: 0.5rem;
+}
+.sobre .itens-container .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.sobre .itens-container .txt-itens p {
+  font-size: 1.4rem;
+}
+.itens-container .txt-itens h3 span {
+  font-weight: 300;
+}
+
+/* Estilo do menu Psicologia */
+
+section.psicologia {
+  padding: 6rem 0;
+  color: #ab735b;
+}
+.psicologia .itens-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.psicologia .itens-container-reverse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.psicologia .itens-container .img-itens img {
+  max-width: 480px;
+  border-radius: 0.5rem;
+}
+.psicologia .itens-container .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.psicologia .itens-container .txt-itens p {
+  font-size: 1.4rem;
+}
+.psicologia .itens-container-reverse .img-itens img {
+  max-width: 480px;
+  border-radius: 0.5rem;
+}
+.psicologia .itens-container-reverse .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.psicologia .itens-container-reverse .txt-itens p {
+  font-size: 1.4rem;
+}
+
+/* Estilo do TCC */
+
+section.tcc {
+  padding: 6rem 0;
+  color: #ab735b;
+}
+.tcc .itens-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.tcc .itens-container-reverse {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.tcc .itens-container .img-itens img {
+  max-width: 480px;
+  border-radius: 0.5rem;
+}
+.tcc .itens-container .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.tcc .itens-container .txt-itens p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.tcc .itens-container-reverse .img-itens img {
+  max-width: 480px;
+  border-radius: 0.5rem;
+}
+.tcc .itens-container-reverse .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.tcc .itens-container-reverse .txt-itens p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+/* Estilo do Contato */
+section.contato {
+  padding: 6rem 0;
+  color: #ab735b;
+}
+.contato .itens-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.contato .itens-container .img-itens-mobile {
+  display: none;
+}
+.contato .itens-container .img-itens-mobile img {
+  max-width: 600px;
+  border-radius: 0.5rem;
+}
+.contato .itens-container .img-itens img {
+  max-width: 600px;
+  border-radius: 0.5rem;
+}
+.contato .itens-container .txt-itens h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 20px;
+}
+.contato .itens-container .txt-itens p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.contato .itens-container .txt-itens .info {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo do Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #feefe8;
+  align-items: center;
+  padding: 2rem 0;
+}
+.whats {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+}
+
+@media (max-width: 1366px) {
+  /* CLASSES GERAIS */
+
+  /* HEADER */
+
+  header {
+    padding: 1rem 2rem;
+  }
+  .btn-abrir-menu i {
+    display: block;
+  }
+
+  /* HERO */
+
+  section.hero-site {
+    background-image: none;
+    height: 100%;
+    color: #ab735b;
+  }
+  .hero-site .itens-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-site .itens-container .hero-img-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .hero-site .itens-container .hero-img-mobile img {
+    height: 60vh;
+  }
+
+  .hero-site .txt-hero h1 {
+    font-size: 30px;
+    margin: 0 0.5rem 0 0.5rem;
+    text-align: center;
+  }
+  .hero-site .txt-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin: 0 0.2rem 0 0.2rem;
+    text-align: center;
+  }
+
+  /* SOBRE */
+  section.sobre {
+    padding: 6rem 0 1rem 0;
+    color: #ab735b;
+  }
+  .sobre .itens-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  .sobre .itens-container .img-itens img {
+    width: 99.9%;
+  }
+  .sobre .itens-container .txt-itens h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .sobre .itens-container .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Psicologia */
+  section.psicologia {
+    padding: 1rem 0;
+  }
+  .psicologia .itens-container {
+    flex-direction: column;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  .psicologia .itens-container-reverse {
+    flex-direction: column-reverse;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  .psicologia .itens-container .img-itens img {
+    max-width: 99.9%;
+  }
+  .psicologia .itens-container .txt-itens h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .psicologia .itens-container .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  .psicologia .itens-container-reverse .img-itens img {
+    max-width: 99.9%;
+  }
+  .psicologia .itens-container-reverse .txt-itens h3 {
+    text-align: center;
+  }
+  .psicologia .itens-container-reverse .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  /* TCC */
+  section.tcc {
+    padding: 1rem 0;
+  }
+  .tcc .itens-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  .tcc .itens-container-reverse {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .tcc .itens-container .img-itens img {
+    max-width: 99.9%;
+  }
+  .tcc .itens-container .txt-itens h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 1rem;
+    padding: 0 0.8rem 0 0.8rem;
+  }
+  .tcc .itens-container .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 0.8rem 0 0.8rem;
+  }
+  .tcc .itens-container-reverse .img-itens img {
+    max-width: 90%;
+    align-items: center;
+    margin-left: 17px;
+    border-radius: 0.5rem;
+  }
+  .tcc .itens-container-reverse .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 0.8rem 0 0.8rem;
+  }
+
+  /* Contato */
+  .contato .itens-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+  }
+  .contato .itens-container .img-itens img {
+    display: none;
+  }
+  .contato .itens-container .img-itens-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .contato .itens-container .img-itens-mobile img {
+    width: 99.9%;
+  }
+  .contato .itens-container .txt-itens h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .contato .itens-container .txt-itens p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  .contato .itens-container .txt-itens .info {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 2rem;
+    margin-bottom: 20px;
+  }
+
+  /* Whatss */
+  .whats {
+    position: fixed;
+    bottom: 1rem;
+    z-index: 3;
+  }
+  .whats > a > img {
+    width: 50px;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+}
